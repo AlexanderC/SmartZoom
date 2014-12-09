@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>AlexanderC</string>
+	<key>Builder Version</key>
+	<string>10600.1.25.1</string>
+	<key>CFBundleDisplayName</key>
+	<string>SmartZoom</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.alexanderc.smartzoom</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Context Menu Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>smart_zoom-run</string>
+				<key>Identifier</key>
+				<string>alexanderc-smart_zoom</string>
+				<key>Title</key>
+				<string>SmartZoom</string>
+			</dict>
+		</array>
+		<key>Database Quota</key>
+		<real>5242880</real>
+		<key>Global Page</key>
+		<string>global.html</string>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>js/jquery-2.1.1.min.js</string>
+				<string>js/SmartZoomWrapper.js</string>
+				<string>js/zoomerang.js</string>
+			</array>
+		</dict>
+		<key>Stylesheets</key>
+		<array>
+			<string>css/main.css</string>
+		</array>
+		<key>Whitelist</key>
+		<array>
+			<string>http://*/*</string>
+			<string>https://*/*</string>
+		</array>
+	</dict>
+	<key>Description</key>
+	<string>Zoom page element in a smart way</string>
+	<key>DeveloperIdentifier</key>
+	<string>MSWR5L45ZQ</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+	<key>Website</key>
+	<string>https://alexanderc.me</string>
+</dict>
+</plist>

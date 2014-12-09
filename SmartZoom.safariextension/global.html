@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Smart Zoom</title>
+
+  <script type="text/javascript">
+  var require = function(script, callback) {
+    if(!script) {
+      callback(script, undefined);
+      return;
+    } else if(Array.isArray(script)) {
+      var requireStack = function(scripts) {
+        var currentScript = scripts.shift();
+        var stackCallback = function() {
+          requireStack(scripts);
+        };
+
+        if(scripts.length <= 0) {
+          stackCallback = callback;
+        }
+
+        require(currentScript, stackCallback);
+      };
+
+      requireStack(script);
+      return;
+    }
+
+    var scriptPath = safari.extension.baseURI + 'js/' + script + '.js';
+
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = scriptPath;
+    script.onload = function() {
+      callback(script, scriptPath);
+    };
+
+    head.appendChild(script);
+  };
+
+  require([
+      (window.$ || window.jQuery) ? undefined : 'jquery-2.1.1.min',
+      'SmartZoom'
+    ], function() {
+      SmartZoom.listen();
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
