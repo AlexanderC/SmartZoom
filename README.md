@@ -1,0 +1,4 @@
+SmartZoom
+=========
+
+SmartZoom- safari extension
